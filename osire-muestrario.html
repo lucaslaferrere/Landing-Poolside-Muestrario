@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OSIRE · Iluminación LED para Piscinas · Pooled</title>
+<meta name="description" content="OSIRE — La luminaria subacuática premium. 18W reales, RGBW, 3 años de garantía. Fabricación argentina.">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3DH87NB1F4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-3DH87NB1F4');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;800;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#080809;
+  --bg2:#0e0e10;
+  --bg3:#141416;
+  --bg4:#1a1a1d;
+  --white:#f2f2f4;
+  --silver:#c4c4cc;
+  --silver2:#8a8a96;
+  --silver3:#505060;
+  --red:#cc2c2c;
+  --t:'Barlow Condensed',sans-serif;
+  --b:'DM Sans',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--white);font-family:var(--b);overflow-x:hidden;line-height:1.6}
+img{display:block;max-width:100%}
+
+/* WA STICKY */
+.wa-f{position:fixed;bottom:20px;right:16px;z-index:999;display:flex;align-items:center;gap:8px;background:#25D366;color:#fff;text-decoration:none;padding:12px 18px;border-radius:50px;font-family:var(--t);font-weight:700;font-size:.92rem;letter-spacing:.05em;box-shadow:0 4px 18px rgba(37,211,102,.35);transition:transform .2s}
+.wa-f:hover{transform:translateY(-2px)}
+@media(max-width:440px){.wa-f span{display:none}.wa-f{padding:13px;border-radius:50%}}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;background:linear-gradient(to bottom,rgba(8,8,9,.95),transparent)}
+.nav-logo img{width:150px;height:auto;filter:brightness(1.15)}
+.nav-btn{border:1px solid rgba(194,196,204,.35);color:var(--white);text-decoration:none;padding:8px 18px;border-radius:3px;font-family:var(--t);font-weight:700;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;transition:border-color .15s,background .15s}
+.nav-btn:hover{border-color:var(--silver);background:rgba(194,196,204,.06)}
+
+/* HERO */
+.hero{position:relative;height:100svh;min-height:580px;overflow:hidden;display:flex;align-items:flex-end}
+.hero-fallback{position:absolute;inset:0;background:linear-gradient(160deg,#1a1a1e 0%,#080809 100%)}
+.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-velo{position:absolute;inset:0;background:linear-gradient(160deg,rgba(8,8,9,.08) 0%,rgba(8,8,9,.38) 40%,rgba(8,8,9,.92) 100%)}
+.hero-body{position:relative;z-index:2;padding:0 20px 56px;max-width:680px}
+@keyframes bl{0%,100%{opacity:1}50%{opacity:.2}}
+.hero h1{font-family:var(--t);font-weight:900;font-size:clamp(3rem,9vw,6rem);line-height:.9;text-transform:uppercase;margin-bottom:16px;letter-spacing:-.01em}
+.hero h1 em{font-style:normal;display:block;
+  background:linear-gradient(135deg,var(--silver),var(--white),var(--silver2));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.hero-sub{font-size:clamp(.88rem,2vw,1rem);color:rgba(242,242,244,.78);font-weight:300;max-width:420px}
+/* SPECS EN GRILLA — todo visible de un vistazo */
+.specs-bar{background:var(--bg2);padding:16px 20px;border-bottom:1px solid rgba(255,255,255,.05)}
+.specs-bar-grid{display:grid;grid-template-columns:repeat(8,1fr);max-width:1100px;margin:0 auto;gap:1px;background:rgba(255,255,255,.05);border-radius:4px;overflow:hidden}
+@media(max-width:700px){.specs-bar-grid{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:360px){.specs-bar-grid{grid-template-columns:repeat(4,1fr)}}
+.spec-item{background:var(--bg3);padding:14px 6px;text-align:center}
+.spec-val{font-family:var(--t);font-weight:900;font-size:clamp(1rem,3vw,1.3rem);color:var(--white);line-height:1;display:block}
+.spec-key{font-size:.55rem;letter-spacing:.08em;text-transform:uppercase;color:var(--silver3);margin-top:3px;display:block;line-height:1.3}
+
+/* SECCIONES */
+.sec{padding:56px 20px}
+.sec-inner{max-width:1040px;margin:0 auto}
+.eyebrow{font-family:var(--t);font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--silver2);display:block;margin-bottom:10px}
+.sec h2{font-family:var(--t);font-weight:900;font-size:clamp(1.8rem,5vw,3rem);line-height:1;text-transform:uppercase;margin-bottom:8px}
+.sec-sub{color:rgba(242,242,244,.45);font-weight:300;font-size:.86rem;margin-bottom:32px;display:block}
+
+/* BENEFICIOS */
+.bens-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:rgba(255,255,255,.05);border-radius:4px;overflow:hidden}
+.ben{background:var(--bg2);padding:20px 18px;display:flex;align-items:flex-start;gap:11px}
+.ben-i{font-size:1.2rem;flex-shrink:0;margin-top:2px}
+.ben strong{font-family:var(--t);font-size:.96rem;font-weight:700;display:block;margin-bottom:2px;color:var(--white)}
+.ben span{font-size:.76rem;color:var(--silver2);line-height:1.5}
+
+/* VIDEO INSTALACIÓN */
+.video-sec{background:var(--bg2);padding:56px 20px}
+.video-inst-wrap{position:relative;border-radius:6px;overflow:hidden;background:#000;aspect-ratio:16/9;max-width:860px;margin:0 auto}
+.video-inst-wrap video{width:100%;height:100%;object-fit:cover;display:block}
+/* big play overlay (antes de arrancar) */
+.play-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.45);cursor:pointer;transition:background .2s;z-index:3}
+.play-overlay:hover{background:rgba(0,0,0,.28)}
+.play-btn-big{width:68px;height:68px;border-radius:50%;border:2px solid rgba(242,242,244,.75);background:rgba(8,8,9,.55);display:flex;align-items:center;justify-content:center;transition:transform .18s,border-color .18s}
+.play-overlay:hover .play-btn-big{transform:scale(1.1);border-color:var(--white)}
+.play-btn-big svg{margin-left:4px}
+/* controles custom */
+.vp-controls{position:absolute;bottom:0;left:0;right:0;z-index:4;padding:28px 16px 12px;background:linear-gradient(to top,rgba(0,0,0,.75),transparent);display:flex;flex-direction:column;gap:8px;opacity:0;transition:opacity .2s;pointer-events:none}
+.video-inst-wrap:hover .vp-controls,.video-inst-wrap.playing .vp-controls{opacity:1;pointer-events:auto}
+.vp-progress{width:100%;height:3px;background:rgba(255,255,255,.2);border-radius:2px;cursor:pointer;position:relative}
+.vp-progress-fill{height:100%;background:var(--white);border-radius:2px;width:0%;transition:width .1s linear;pointer-events:none}
+.vp-row{display:flex;align-items:center;gap:10px}
+.vp-btn{background:none;border:none;cursor:pointer;padding:4px;display:flex;align-items:center;justify-content:center;color:var(--white);opacity:.85;transition:opacity .15s}
+.vp-btn:hover{opacity:1}
+.vp-time{font-family:var(--t);font-size:.72rem;color:rgba(242,242,244,.6);letter-spacing:.04em;margin-left:4px}
+
+/* CONEXIONES */
+.con-sec{background:var(--bg3);padding:56px 20px}
+.con-cards{display:grid;grid-template-columns:1fr 1fr;gap:2px;border-radius:5px;overflow:hidden;max-width:860px;margin:0 auto}
+@media(max-width:520px){.con-cards{grid-template-columns:1fr}}
+.con-card{background:var(--bg2);display:flex;flex-direction:column}
+.con-card.feat{background:var(--bg4);border:1px solid rgba(194,196,204,.12)}
+.con-img-wrap{width:100%;aspect-ratio:4/3;background:var(--bg);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.con-img-wrap img{width:100%;height:100%;object-fit:contain}
+.con-body{padding:22px 20px;flex:1;text-align:left}
+.con-tag{display:inline-block;font-family:var(--t);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;background:rgba(194,196,204,.08);color:var(--silver);padding:4px 10px;border-radius:2px;margin-bottom:10px}
+.con-card.feat .con-tag{background:rgba(204,44,44,.1);color:#e06060}
+.con-card h3{font-family:var(--t);font-weight:800;font-size:1.3rem;text-transform:uppercase;margin-bottom:8px}
+.con-card p{font-size:.8rem;color:var(--silver2);line-height:1.6;margin-bottom:12px}
+.con-buls{list-style:none;display:flex;flex-direction:column;gap:5px}
+.con-buls li{display:flex;align-items:flex-start;gap:7px;font-size:.77rem;color:rgba(242,242,244,.7)}
+.con-buls li::before{content:'—';color:var(--silver3);flex-shrink:0}
+
+/* GALERÍA */
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.gal-item{position:relative;overflow:hidden;aspect-ratio:4/5;background:var(--bg2)}
+.gal-item:nth-child(1){background:linear-gradient(160deg,#0d1f15,#0a160f)}
+.gal-item:nth-child(2){background:linear-gradient(160deg,#150d20,#0f0a18)}
+.gal-item:nth-child(3){background:linear-gradient(160deg,#0d1525,#080e1a)}
+@media(max-width:580px){.gal{grid-template-columns:1fr}.gal-item{aspect-ratio:16/9}}
+.gal-item img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.gal-item:hover img{transform:scale(1.04)}
+.gal-cap{position:absolute;bottom:0;left:0;right:0;padding:22px 16px 12px;background:linear-gradient(to top,rgba(8,8,9,.9),transparent);font-family:var(--t);font-weight:700;font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;color:var(--silver)}
+
+/* CALCULADORA */
+.calc-sec{background:var(--bg3);padding:56px 20px}
+.calc-in{max-width:800px;margin:0 auto}
+.calc-in .eyebrow,.calc-in h2,.calc-sub{display:block;text-align:center}
+.calc-in h2{font-family:var(--t);font-weight:900;font-size:clamp(1.8rem,5vw,3rem);text-transform:uppercase;line-height:1;margin-bottom:7px}
+.calc-sub{color:var(--silver2);font-size:.86rem;font-weight:300;margin-bottom:32px}
+.sliders{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:26px}
+@media(max-width:480px){.sliders{grid-template-columns:1fr}}
+.sl-g label{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:9px}
+.sl-g label span{font-family:var(--t);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--silver2)}
+.sl-g label strong{font-family:var(--t);font-size:1.8rem;font-weight:900;color:var(--white);line-height:1}
+input[type=range]{width:100%;-webkit-appearance:none;height:3px;background:rgba(255,255,255,.1);border-radius:2px;cursor:pointer;outline:none}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:17px;height:17px;background:var(--silver);border-radius:50%;border:3px solid var(--bg);transition:transform .15s}
+input[type=range]::-webkit-slider-thumb:hover{transform:scale(1.2)}
+.pool-prev{text-align:center;margin-bottom:26px}
+.pool-box{display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#1a2030,#2a3550);border:1px solid rgba(194,196,204,.2);border-radius:6px;transition:width .25s,height .25s;min-width:60px;min-height:40px}
+.pool-lbl{font-family:var(--t);font-weight:800;font-size:.9rem;color:rgba(242,242,244,.85)}
+.pool-dim{font-family:var(--t);font-size:.68rem;letter-spacing:.1em;color:var(--silver2);margin-top:6px;display:block}
+.res{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.04);border-radius:4px;overflow:hidden;margin-bottom:16px}
+@media(max-width:420px){.res{grid-template-columns:1fr}}
+.rc{padding:20px 16px}
+.rc.cc{background:var(--bg2)}
+.rc.oc{background:var(--bg4);border-left:1px solid rgba(194,196,204,.15)}
+.rc h3{font-family:var(--t);font-size:.64rem;letter-spacing:.17em;text-transform:uppercase;margin-bottom:14px;color:var(--silver3)}
+.rc.oc h3{color:var(--silver)}
+.rr{display:flex;justify-content:space-between;align-items:baseline;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:.78rem}
+.rr:last-of-type{border:none}
+.rl{color:var(--silver3);font-weight:300}
+.rv{font-family:var(--t);font-weight:700;font-size:.88rem;color:var(--white)}
+.oc .rv{color:var(--silver)}
+.rt{margin-top:10px;padding-top:10px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;align-items:baseline}
+.rtl{font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--silver3)}
+.rtv{font-family:var(--t);font-size:1.4rem;font-weight:900}
+.cc .rtv{color:rgba(200,80,80,.85)}
+.oc .rtv{color:var(--white)}
+.ahorro{
+  background:linear-gradient(135deg,rgba(255,255,255,.06) 0%,rgba(255,255,255,.02) 100%);
+  border:1px solid rgba(220,220,230,.25);
+  border-radius:4px;padding:18px 20px;
+  display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;
+  box-shadow:0 0 32px rgba(200,200,220,.08), inset 0 1px 0 rgba(255,255,255,.08);
+}
+.at{font-size:.8rem;color:var(--silver2);font-weight:300}
+.at strong{display:block;color:var(--white);font-size:.83rem;margin-bottom:1px}
+.an{font-family:var(--t);font-size:clamp(1.7rem,5vw,2.5rem);font-weight:900;color:var(--white);text-shadow:0 0 40px rgba(220,220,240,.3)}
+.calc-note{text-align:center;font-size:.68rem;color:rgba(90,90,100,.5);margin-top:12px;line-height:1.5}
+
+/* SPECS TÉCNICAS */
+.specs-tec{background:var(--bg2);padding:56px 20px}
+.specs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1px;background:rgba(255,255,255,.04);border-radius:4px;overflow:hidden;max-width:860px;margin:0 auto}
+.spec-box{background:var(--bg3);padding:18px 14px;text-align:center}
+.spec-box .sv{font-family:var(--t);font-weight:900;font-size:1.5rem;color:var(--white);line-height:1;display:block}
+.spec-box .sk{font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--silver3);margin-top:4px;display:block}
+
+/* CTA FINAL */
+.cta-sec{position:relative;overflow:hidden;padding:80px 20px;text-align:center}
+.cta-bg{position:absolute;inset:0;background:url('img/pool-blue.png') center/cover no-repeat;opacity:.15;filter:grayscale(.4)}
+.cta-velo{position:absolute;inset:0;background:linear-gradient(to bottom,var(--bg) 0%,transparent 25%,transparent 75%,var(--bg) 100%)}
+.cta-body{position:relative;z-index:2;max-width:540px;margin:0 auto}
+.cta-body h2{font-family:var(--t);font-weight:900;font-size:clamp(2.4rem,7vw,4.5rem);line-height:.93;text-transform:uppercase;margin-bottom:14px}
+.cta-body h2 em{font-style:normal;
+  background:linear-gradient(135deg,var(--silver),var(--white),var(--silver2));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.cta-body p{color:rgba(242,242,244,.5);font-weight:300;font-size:.88rem;margin-bottom:26px;line-height:1.65}
+.btn-wa{display:inline-flex;align-items:center;gap:10px;background:#25D366;color:#fff;text-decoration:none;padding:16px 30px;border-radius:4px;font-family:var(--t);font-weight:800;font-size:1.05rem;letter-spacing:.06em;text-transform:uppercase;box-shadow:0 4px 20px rgba(37,211,102,.3);transition:transform .18s;margin-bottom:14px}
+.btn-wa:hover{transform:translateY(-2px)}
+.cta-note{display:block;font-size:.7rem;color:rgba(90,90,100,.5)}
+
+/* FOOTER */
+footer{background:var(--bg2);padding:22px 20px;text-align:center;border-top:1px solid rgba(255,255,255,.04)}
+footer img{height:40px;margin:0 auto 7px;opacity:.6}
+footer p{font-size:.7rem;color:var(--silver3)}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.reveal.on{opacity:1;transform:none}
+
+@media(max-width:899px){
+  .hero video{object-fit:contain;object-position:center}
+}
+@media(max-width:540px){
+  .hero-body{padding:0 16px 44px}
+  .hero h1{font-size:clamp(2.6rem,12vw,4rem)}
+  /* Calculadora mobile */
+  .res{grid-template-columns:1fr}
+  .rc.oc{border-left:none;border-top:1px solid rgba(194,196,204,.15)}
+  .rr{flex-direction:column;gap:2px;align-items:flex-start}
+  .rv{font-size:.82rem}
+  .ahorro{flex-direction:column;align-items:flex-start;gap:8px}
+  .an{font-size:clamp(1.8rem,8vw,2.4rem)}
+  /* Secciones */
+  .sec{padding:40px 16px}
+  .video-sec,.con-sec,.calc-sec,.specs-tec{padding:40px 16px}
+  .con-body{padding:16px}
+}
+
+
+</style>
+</head>
+<body>
+
+<a href="https://wa.me/5491123427593?text=Hola%2C+vi+la+OSIRE+en+el+local+y+quiero+saber+m%C3%A1s" target="_blank" class="wa-f">
+  <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span>Consultá ahora</span>
+</a>
+
+<nav>
+  <a href="#" style="text-decoration:none">
+    <img src="img/logo.png" alt="Pooled" style="width:150px;height:auto;filter:brightness(1.15)" onerror="this.outerHTML='<span style=\'font-family:var(--t);font-weight:900;font-size:1.2rem;letter-spacing:.1em;color:#f2f2f4\'>POOLED</span>'">
+  </a>
+  <a href="https://wa.me/5491123427593?text=Hola%2C+vi+la+OSIRE+en+el+local+y+quiero+saber+m%C3%A1s" target="_blank" class="nav-btn">Consultá</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-fallback"></div>
+  <video autoplay muted loop playsinline>
+    <source src="videos/osire-presentacion.mp4" type="video/mp4">
+  </video>
+  <div class="hero-velo"></div>
+  <div class="hero-body">
+    
+    <h1>La luminaria<em>que no falla.</em></h1>
+    <p class="hero-sub">Diseñada para sobrevivir donde las demás fallan. Con o sin agua, en cualquier condición.</p>
+  </div>
+</section>
+
+<!-- SPECS BAR -->
+<div class="specs-bar">
+  <div class="specs-bar-grid">
+    <div class="spec-item"><span class="spec-val">18W</span><span class="spec-key">Potencia real</span></div>
+    <div class="spec-item"><span class="spec-val">2000lm</span><span class="spec-key">Lúmenes</span></div>
+    <div class="spec-item"><span class="spec-val">RGBW</span><span class="spec-key">4 canales</span></div>
+    <div class="spec-item"><span class="spec-val">24V</span><span class="spec-key">Baja tensión</span></div>
+    <div class="spec-item"><span class="spec-val">IP68</span><span class="spec-key">Sumergible</span></div>
+    <div class="spec-item"><span class="spec-val">3 años</span><span class="spec-key">Garantía</span></div>
+    <div class="spec-item"><span class="spec-val">3</span><span class="spec-key">Conductores</span></div>
+    <div class="spec-item"><span class="spec-val">2</span><span class="spec-key">Tipos de conexión</span></div>
+  </div>
+</div>
+
+<!-- BENEFICIOS -->
+<section class="sec">
+  <div class="sec-inner">
+    <span class="eyebrow">Por qué OSIRE</span>
+    <h2>Hecha para durar.</h2>
+    <span class="sec-sub">Cada detalle pensado para el entorno más exigente que existe.</span>
+    <div class="bens-grid reveal">
+      <div class="ben"><span class="ben-i">🔥</span><div><strong>No se quema sin agua</strong><span>Vaciaste la piscina. OSIRE sigue funcionando. Sin excusas, sin excepciones.</span></div></div>
+      <div class="ben"><span class="ben-i">💡</span><div><strong>Hasta 67% más iluminación</strong><span>Menos luminarias para el mismo resultado. Tu piscina, más brillante.</span></div></div>
+      <div class="ben"><span class="ben-i">🌡️</span><div><strong>Piscinas climatizadas</strong><span>Protección térmica de -20° a +60°C. Funciona igual en verano, en invierno y con agua caliente.</span></div></div>
+      <div class="ben"><span class="ben-i">🎨</span><div><strong>Tecnología White Pure</strong><span>Blanco auténtico y definido, generado por LED blanco real y no por combinación RGB.</span></div></div>
+      <div class="ben"><span class="ben-i">🔌</span><div><strong>Solo 3 conductores</strong><span>Menos cable en la instalación. Más prolijo, más rápido, más económico.</span></div></div>
+      <div class="ben"><span class="ben-i">📡</span><div><strong>Conectividad extendida</strong><span>Comunicación estable entre luminarias hasta 300M de distancia.</span></div></div>
+      <div class="ben"><span class="ben-i">📱</span><div><strong>Control desde el celular</strong><span>Colores, intensidad, programación. Todo desde la app.</span></div></div>
+      <div class="ben"><span class="ben-i">🛡️</span><div><strong>3 años de garantía real</strong><span>No 12 meses. Tres años respaldados por la fábrica.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO INSTALACIÓN -->
+<section class="video-sec">
+  <div class="sec-inner" style="text-align:center">
+    <span class="eyebrow">Instalación</span>
+    <h2 style="font-family:var(--t);font-weight:900;font-size:clamp(1.8rem,5vw,3rem);text-transform:uppercase;line-height:1;margin-bottom:8px">Simple de instalar.</h2>
+    <span class="sec-sub" style="display:block;margin-bottom:28px">Mirá cómo se hace, paso a paso.</span>
+    <div class="video-inst-wrap reveal" id="inst-wrap">
+      <video id="inst-video" preload="metadata" playsinline></video>
+      <!-- overlay inicial -->
+      <div class="play-overlay" id="play-overlay" onclick="vpPlay()">
+        <div class="play-btn-big">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+      </div>
+      <!-- controles -->
+      <div class="vp-controls" id="vp-controls">
+        <div class="vp-progress" id="vp-progress">
+          <div class="vp-progress-fill" id="vp-fill"></div>
+        </div>
+        <div class="vp-row">
+          <button class="vp-btn" onclick="vpSkip(-5)" title="-5s">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 5V2L8 6l4 4V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"/><text x="9" y="15" font-size="6" fill="currentColor" font-family="sans-serif">5</text></svg>
+          </button>
+          <button class="vp-btn" id="vp-playpause" onclick="vpToggle()">
+            <svg id="vp-icon-play" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            <svg id="vp-icon-pause" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+          </button>
+          <button class="vp-btn" onclick="vpSkip(5)" title="+5s">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 5V2l4 4-4 4V7c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6h2c0 4.42-3.58 8-8 8s-8-3.58-8-8 3.58-8 8-8z"/><text x="9" y="15" font-size="6" fill="currentColor" font-family="sans-serif">5</text></svg>
+          </button>
+          <span class="vp-time" id="vp-time">0:00 / 0:00</span>
+          <button class="vp-btn" onclick="vpMute()" id="vp-mute" title="Silenciar" style="margin-left:auto">
+            <svg id="vp-icon-sound" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+            <svg id="vp-icon-mute" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONEXIONES -->
+<section class="con-sec">
+  <div style="max-width:860px;margin:0 auto;text-align:center">
+    <span class="eyebrow">Dos formas de instalarla</span>
+    <h2 style="font-family:var(--t);font-weight:900;font-size:clamp(1.8rem,5vw,3rem);text-transform:uppercase;line-height:1;margin-bottom:8px">Elegís vos cómo conectarla</h2>
+    <span style="color:rgba(242,242,244,.45);font-size:.86rem;font-weight:300;margin-bottom:32px;display:block">Adaptamos la conexión a tu piscina, no al revés.</span>
+    <div class="con-cards reveal">
+      <div class="con-card">
+        <div class="con-img-wrap"><img src="img/osire-cable.png" alt="OSIRE instalación tradicional" loading="lazy"></div>
+        <div class="con-body">
+          <span class="con-tag">Instalación tradicional</span>
+          <h3>Cable</h3>
+          <p>Cable de 3 metros incluido. Instalación rápida sin accesorios adicionales.</p>
+          <ul class="con-buls">
+            <li>Cable incluido desde la luminaria</li>
+            <li>Instalación sencilla</li>
+            <li>Listo para conectar</li>
+          </ul>
+        </div>
+      </div>
+      <div class="con-card feat">
+        <div class="con-img-wrap"><img src="img/osire-conector.png" alt="Conector POOLED" loading="lazy"></div>
+        <div class="con-body">
+          <span class="con-tag">Sistema POOLED</span>
+          <h3>Conector POOLED</h3>
+          <p>Retirás la luminaria sin tocar el cableado. Mantenimiento simple, instalación prolija.</p>
+          <ul class="con-buls">
+            <li>Retiro sin intervenir el cable</li>
+            <li>Solo 3 conductores</li>
+            <li>Señal estable hasta 300 metros</li>
+            <li>IP68 · Cable a medida por proyecto</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERÍA -->
+<section class="gal">
+  <div class="gal-item"><img src="img/pool-green.png" alt="Verde" loading="lazy"><span class="gal-cap">Verde</span></div>
+  <div class="gal-item"><img src="img/pool-purple.png" alt="Violeta" loading="lazy"><span class="gal-cap">Violeta</span></div>
+  <div class="gal-item"><img src="img/pool-blue.png" alt="Azul" loading="lazy"><span class="gal-cap">Azul</span></div>
+</section>
+
+<!-- CALCULADORA -->
+<section class="calc-sec" id="calculadora">
+  <div class="calc-in">
+    <span class="eyebrow">Hacé los números</span>
+    <h2>¿Cuánto ahorrás en 3 años?</h2>
+    <span class="calc-sub">Ingresá las medidas de tu piscina y mirá la diferencia real.</span>
+    <div class="sliders">
+      <div class="sl-g"><label><span>Largo</span><strong id="vl">8 m</strong></label><input type="range" id="sl" min="3" max="20" value="8" step="0.5"></div>
+      <div class="sl-g"><label><span>Ancho</span><strong id="va">4 m</strong></label><input type="range" id="sa" min="2" max="10" value="4" step="0.5"></div>
+    </div>
+    <div class="pool-prev"><div class="pool-box" id="pb"><span class="pool-lbl" id="pa">32 m²</span></div><span class="pool-dim" id="pd">8 m × 4 m</span></div>
+    <div class="res">
+      <div class="rc cc">
+        <h3>Luminaria estándar del mercado</h3>
+        <div class="rr"><span class="rl">Luminarias necesarias</span><span class="rv" id="cu">—</span></div>
+        <div class="rr"><span class="rl">Cable (5 conductores)</span><span class="rv" id="cc2">—</span></div>
+        <div class="rr"><span class="rl">Instalación inicial</span><span class="rv" id="ci">—</span></div>
+        <div class="rr"><span class="rl">Reemplazos en 3 años</span><span class="rv" id="cr">—</span></div>
+        <div class="rt"><span class="rtl">Total 3 años</span><span class="rtv" id="ct">—</span></div>
+      </div>
+      <div class="rc oc">
+        <h3>OSIRE · Pooled</h3>
+        <div class="rr"><span class="rl">Luminarias necesarias</span><span class="rv" id="ou">—</span></div>
+        <div class="rr"><span class="rl">Cable (3 conductores)</span><span class="rv" id="oc2">—</span></div>
+        <div class="rr"><span class="rl">Instalación inicial</span><span class="rv" id="oi">—</span></div>
+        <div class="rr"><span class="rl">Reemplazos en 3 años</span><span class="rv">0 — garantía incluida</span></div>
+        <div class="rt"><span class="rtl">Total 3 años</span><span class="rtv" id="ot">—</span></div>
+      </div>
+    </div>
+    <div class="ahorro">
+      <div class="at"><strong>Con OSIRE ahorrás en 3 años</strong>vs. luminaria estándar con 2 reemplazos · valores de referencia</div>
+      <div class="an" id="an">—</div>
+    </div>
+    <p class="calc-note">Estimación: luminaria estándar $150.000/u · OSIRE $334.800/u · 2 reemplazos en 3 años · cable 5c $3.150/m · cable 3c $1.890/m · distancia promedio 12m/luminaria.</p>
+  </div>
+</section>
+
+<!-- SPECS TÉCNICAS -->
+<section class="specs-tec">
+  <div style="max-width:860px;margin:0 auto;text-align:center">
+    <span class="eyebrow" style="display:block">Especificaciones</span>
+    <h2 style="font-family:var(--t);font-weight:900;font-size:clamp(1.8rem,5vw,3rem);text-transform:uppercase;line-height:1;margin-bottom:32px">Datos técnicos</h2>
+    <div class="specs-grid reveal">
+      <div class="spec-box"><span class="sv">18W</span><span class="sk">Potencia real</span></div>
+      <div class="spec-box"><span class="sv">2000lm</span><span class="sk">Lúmenes</span></div>
+      <div class="spec-box"><span class="sv">160°</span><span class="sk">Ángulo</span></div>
+      <div class="spec-box"><span class="sv">24VDC</span><span class="sk">Tensión</span></div>
+      <div class="spec-box"><span class="sv">IP68</span><span class="sk">Protección</span></div>
+      <div class="spec-box"><span class="sv">Ø100</span><span class="sk">Diámetro mm</span></div>
+      <div class="spec-box"><span class="sv">1,5m</span><span class="sk">Prof. máx.</span></div>
+      <div class="spec-box"><span class="sv">3 años</span><span class="sk">Garantía</span></div>
+      <div class="spec-box"><span class="sv">Inox</span><span class="sk">Material</span></div>
+      <div class="spec-box"><span class="sv">🇦🇷</span><span class="sk">Fabricación</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-sec">
+  <div class="cta-bg"></div>
+  <div class="cta-velo"></div>
+  <div class="cta-body reveal">
+    <h2>Hecha para durar.<br><em>Hecha para iluminar.</em></h2>
+    <p>¿Querés saber más? Escribinos por WhatsApp — te respondemos al instante.</p>
+    <a href="https://wa.me/5491123427593?text=Hola%2C+vi+la+OSIRE+en+el+local+y+quiero+saber+m%C3%A1s" target="_blank" class="btn-wa">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Consultá ahora
+    </a>
+    <span class="cta-note">pooled.com.ar · Fabricación argentina 🇦🇷</span>
+  </div>
+</section>
+
+<footer>
+  <img src="img/logo.png" alt="Pooled" onerror="this.style.display='none'">
+  <p>POOLED · Iluminación LED para Piscinas · pooled.com.ar</p>
+</footer>
+
+<script>
+var fmt=function(n){return '$'+Math.round(n).toLocaleString('es-AR')};
+var OSIRE=334800,COMP=150000,C5=3150,C3=1890,DIST=12,CA=20,OA=30,REPL=2;
+function calc(){
+  var L=parseFloat(document.getElementById('sl').value),A=parseFloat(document.getElementById('sa').value),area=L*A;
+  document.getElementById('vl').textContent=L+' m';document.getElementById('va').textContent=A+' m';
+  var mW=Math.min(240,window.innerWidth-80),mH=140,ratio=L/A,w,h;
+  if(ratio>=1){w=mW;h=Math.max(40,mW/ratio);if(h>mH){h=mH;w=mH*ratio;}}else{h=mH;w=Math.max(55,mH*ratio);}
+  var pb=document.getElementById('pb');pb.style.width=Math.round(w)+'px';pb.style.height=Math.round(h)+'px';
+  document.getElementById('pa').textContent=Math.round(area)+' m²';document.getElementById('pd').textContent=L+' m × '+A+' m';
+  var cu=Math.ceil(area/CA),ou=Math.ceil(area/OA),ccm=cu*DIST,ocm=ou*DIST,ccc=ccm*C5,occ=ocm*C3;
+  var ci=cu*COMP+ccc,oi=ou*OSIRE+occ,cr=REPL*cu*COMP,ct=ci+cr,ot=oi,ahorro=ct-ot;
+  document.getElementById('cu').textContent=cu+(cu===1?' luminaria':' luminarias');
+  document.getElementById('cc2').textContent=ccm+'m · '+fmt(ccc);
+  document.getElementById('ci').textContent=fmt(ci);document.getElementById('cr').textContent=REPL+'x · '+fmt(cr);
+  document.getElementById('ct').textContent=fmt(ct);document.getElementById('ou').textContent=ou+(ou===1?' luminaria':' luminarias');
+  document.getElementById('oc2').textContent=ocm+'m · '+fmt(occ);document.getElementById('oi').textContent=fmt(oi);document.getElementById('ot').textContent=fmt(ot);
+  var an=document.getElementById('an'),pct=Math.round((ahorro/ct)*100);
+  if(ahorro>0){an.innerHTML=fmt(ahorro)+'<span style="display:block;font-size:clamp(.9rem,3vw,1.2rem);color:var(--silver2);margin-top:4px">— '+pct+'% menos que la competencia</span>';an.style.color='var(--white)';}
+  else{an.textContent='Consultanos';an.style.color='var(--silver2)';}
+}
+document.getElementById('sl').addEventListener('input',calc);document.getElementById('sa').addEventListener('input',calc);calc();
+
+var _vpV=document.getElementById('inst-video');
+_vpV.src='videos/osire-instalacion.mp4';
+function fmtT(s){var m=Math.floor(s/60),ss=Math.floor(s%60);return m+':'+(ss<10?'0':'')+ss;}
+function vpPlay(){
+  document.getElementById('play-overlay').style.display='none';
+  document.getElementById('inst-wrap').classList.add('playing');
+  _vpV.play();
+  document.getElementById('vp-icon-play').style.display='none';
+  document.getElementById('vp-icon-pause').style.display='';
+  gtag('event','video_play',{event_category:'instalacion',event_label:'osire_muestrario'});
+}
+function vpToggle(){
+  if(_vpV.paused){_vpV.play();document.getElementById('vp-icon-play').style.display='none';document.getElementById('vp-icon-pause').style.display='';}
+  else{_vpV.pause();document.getElementById('vp-icon-play').style.display='';document.getElementById('vp-icon-pause').style.display='none';}
+}
+function vpSkip(s){_vpV.currentTime=Math.max(0,Math.min(_vpV.duration||0,_vpV.currentTime+s));}
+function vpMute(){_vpV.muted=!_vpV.muted;document.getElementById('vp-icon-sound').style.display=_vpV.muted?'none':'';document.getElementById('vp-icon-mute').style.display=_vpV.muted?'':'none';}
+_vpV.addEventListener('timeupdate',function(){
+  if(!_vpV.duration)return;
+  document.getElementById('vp-fill').style.width=(_vpV.currentTime/_vpV.duration*100)+'%';
+  document.getElementById('vp-time').textContent=fmtT(_vpV.currentTime)+' / '+fmtT(_vpV.duration);
+});
+_vpV.addEventListener('ended',function(){
+  document.getElementById('vp-icon-play').style.display='';
+  document.getElementById('vp-icon-pause').style.display='none';
+});
+document.getElementById('vp-progress').addEventListener('click',function(e){
+  var r=this.getBoundingClientRect();
+  _vpV.currentTime=((e.clientX-r.left)/r.width)*(_vpV.duration||0);
+});
+document.querySelectorAll('a[href*="wa.me"]').forEach(function(el){
+  el.addEventListener('click',function(){gtag('event','whatsapp_click',{event_category:'contacto',event_label:'osire_muestrario'});});
+});
+var els=document.querySelectorAll('.reveal');
+if(typeof IntersectionObserver!=='undefined'){
+  var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target);}});},{threshold:0.1});
+  els.forEach(function(el){io.observe(el);});
+}else{els.forEach(function(el){el.classList.add('on');});}
+setTimeout(function(){els.forEach(function(el){el.classList.add('on');});},1000);
+</script>
+</body>
+</html>
